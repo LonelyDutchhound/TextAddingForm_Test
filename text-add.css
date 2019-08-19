@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.text-form{
+  width: 600px;
+  min-width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(24, 77, 140, 0.64);
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+.text-form__text-input,
+.text-form__date-input,
+.text-form__add-button {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  border-collapse: collapse;
+  border-color: rgba(24, 77, 140, 0.4)
+}
+
+.text-form__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 1em 0;
+  color: rgb(24, 77, 140)
+}
+
+.text-form__input-group {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.text-form__text-input {
+  max-width: 99%;
+  max-height: 4em;
+  min-width: 99%;
+  min-height: 8em;
+  margin-top: 0.3em;
+}
+
+.text-form__date-input {
+  margin-left: 0.3em;
+}
+
+.text-form__add-button {
+  position: relative;
+  height: 2.2em;
+  text-transform: uppercase;
+  background-color: rgba(24, 77, 140, 0.64);
+  color: #fff;
+}

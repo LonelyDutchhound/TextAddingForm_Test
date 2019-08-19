@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="text-add.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="text-add.js"></script>
+
+  <title>Text add form</title>
+</head>
+<body>
+
+  <form class="text-form" action="index.html" method="post">
+
+    <h1 class="text-form__title">Text adding form</h1>
+
+    <div class="text-form__add-group">
+      <div class="text-form__input-group">
+        <label class="text-form__label" for="text" >Your text</label>
+        <textarea class="text-form__text-input" type="text" maxlength="400" placeholder="Enter your text here: 400 chars only" required></textarea>
+      </div>
+
+      <div class="text-form__input-group">
+        <label class="text-form__label" for="date">Date & time</label>
+        <input class="text-form__date-input" type="datetime-local" required>
+      </div>
+      <div class="text-form__input-group">
+        <button class="text-form__add-button" type="button" name="add-button">Add my text to stack</button>
+      </div>
+    </div>
+
+    <div class="text-form__show-text-group">
+
+    </div>
+
+  </form>
+
+</body>
+</html>
