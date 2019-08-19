@@ -56,3 +56,18 @@ body {
   background-color: rgba(24, 77, 140, 0.64);
   color: #fff;
 }
+
+.text-form__show-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-post__block{
+  display: flex;
+
+}
+
+p {
+  font-size: 14px;
+  margin: 0 1em;
+}
