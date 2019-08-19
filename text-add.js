@@ -16,7 +16,7 @@ function addPost () {
 
     $('.text-form__show-text-group').prepend(newUserPost.createPost());
 
-    $('input:checkbox')[0].addEventListener('change', sortPosts);
+    $('.text-form__show-text-group')[0].addEventListener('change', sortPosts);
   }
 };
 
@@ -34,6 +34,6 @@ function UserPost ( userText, userDate ) {
 
 function sortPosts() {
   let postId = window.event.target.id;
+  
   $('.'+ postId).toggleClass('selected');
-
 }

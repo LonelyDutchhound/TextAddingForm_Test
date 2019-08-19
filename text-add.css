@@ -38,6 +38,7 @@ body {
 }
 
 .text-input__field {
+  resize: none;
   max-width: 99%;
   max-height: 4em;
   min-width: 99%;
@@ -64,7 +65,15 @@ body {
 
 .user-post__block{
   display: flex;
+  order: -1;
   margin-bottom: 2em;
+  max-width: 99%;
+}
+
+.user-post__text {
+  position: relative;
+  text-align: justify;
+  word-wrap: break-word;
 }
 
 p {
@@ -74,4 +83,5 @@ p {
 
 .selected {
   text-decoration: line-through;
+  order: 1;
 }
