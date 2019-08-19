@@ -22,7 +22,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px;
   border-collapse: collapse;
-  border-color: rgba(24, 77, 140, 0.4)
+
 }
 
 .text-form__title {
@@ -37,7 +37,7 @@ body {
   margin-bottom: 1em;
 }
 
-.text-form__text-input {
+.text-input__field {
   max-width: 99%;
   max-height: 4em;
   min-width: 99%;
@@ -45,7 +45,7 @@ body {
   margin-top: 0.3em;
 }
 
-.text-form__date-input {
+.date-input__field {
   margin-left: 0.3em;
 }
 
