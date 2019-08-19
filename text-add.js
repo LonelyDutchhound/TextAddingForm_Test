@@ -5,12 +5,19 @@ $(function functionName() {
 });
 
 function addNewUserText () {
-  let userText, userDate;
 
   userText = $('.text-input__field').val();
   userDate = $('.date-input__field').val();
 
   $('.text-input__field,.date-input__field').val('');
 
-  console.log(userText, userDate);
+  let newUserPost = new UserPost (userText, userDate);
+
+  console.log(newUserPost);
+  $('text-form__show-text-group').
+}
+
+function UserPost ( userText, userDate ) {
+  this.userText = userText,
+  this.userDate = userDate
 }
