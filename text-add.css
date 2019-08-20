@@ -44,6 +44,15 @@ body {
   color: rgb(24, 77, 140)
 }
 
+.preq_error {
+  display: none;
+}
+
+.show {
+  display: block;
+  text-align: center;
+}
+
 .text-form__input-group {
   position: relative;
   margin-bottom: 1em;
@@ -100,4 +109,10 @@ p {
   position: relative;
   text-align: justify;
   word-wrap: break-word;
+}
+
+p.preq {
+  font-size: 10px;
+  color: red;
+  margin: 0 0.5em 0;
 }

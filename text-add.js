@@ -1,7 +1,7 @@
 $(function functionName() {
 
   $('.text-form__add-button')[0].addEventListener('click', addPost);
-  $('body').keyup(function () {
+  $('.text-form__add-group').keyup(function () {
     if (event.keyCode === 13) addPost();
   });
 
@@ -18,11 +18,15 @@ function addPost () {
 
       let newUserPost = new UserPost (userText, userDate);
 
-      $('.text-input__field,.date-input__field').val('');
-
-      $('.text-form__show-text-group')[0].addEventListener('change', sortPosts);
       newUserPost.createDateContainer();
       newUserPost.createPost();
+
+      $('.text-input__field,.date-input__field').val('');
+      $('.text-form__show-text-group')[0].addEventListener('change', sortPosts);
+
+  } else {
+
+    $('.preq_error').addClass('show')
   }
 };
 
@@ -32,6 +36,7 @@ function UserPost ( userText, userDate ) {
   this.uniqId = userDate.split('-').join('').split(':').join('');
 
   this.createDateContainer = () => {
+    if ($('.preq_error').length) $('.preq_error').removeClass('show');
     if (!$(`.n${this.uniqId.substring(0, 8)}`).length)
     $('.text-form__show-text-group').prepend(`
       <div class="user-post__date-block  n${this.uniqId.substring(0, 8)}">
@@ -52,7 +57,7 @@ function UserPost ( userText, userDate ) {
   }
 };
 
-function sortPosts() {
+function sortPosts(event) {
   const postId = event.target.id;
 
   $('.'+ postId).toggleClass('selected');
