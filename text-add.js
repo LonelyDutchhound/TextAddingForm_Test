@@ -1,6 +1,9 @@
 $(function functionName() {
 
   $('.text-form__add-button')[0].addEventListener('click', addPost);
+  $('body').keyup(function () {
+    if (event.keyCode === 13) addPost();
+  });
 
 });
 
@@ -12,7 +15,7 @@ function addPost () {
 
       const userText = $textfield.val();
       const userDate = $datefield.val();
-      console.log(userText, userDate);
+
       let newUserPost = new UserPost (userText, userDate);
 
       $('.text-input__field,.date-input__field').val('');
@@ -27,13 +30,15 @@ function UserPost ( userText, userDate ) {
   this.userText = userText,
   this.userDate = userDate.substring(0, 10) + ' ' + userDate.substring(11),
   this.uniqId = userDate.split('-').join('').split(':').join('');
+
   this.createDateContainer = () => {
     if (!$(`.n${this.uniqId.substring(0, 8)}`).length)
     $('.text-form__show-text-group').prepend(`
       <div class="user-post__date-block  n${this.uniqId.substring(0, 8)}">
         <p class="block-date">Post from ${this.userDate}</p>
       </div>`);
-  }
+  };
+
   this.createPost = () => {
     $(`.n${this.uniqId.substring(0, 8)}`).append(`
       <div class="user-post__block  n${this.uniqId}">
