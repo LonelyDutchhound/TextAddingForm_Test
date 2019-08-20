@@ -63,9 +63,31 @@ body {
   flex-direction: column;
 }
 
-.user-post__block{
+.selected {
+  text-decoration: line-through;
+  order: 2;
+}
+
+p {
+  display: block;
+  order: -2;
+  font-size: 14px;
+  margin: 0 1em 1em;
+}
+
+.block-date {
+  font-weight: bold;
+}
+
+.user-post__date-block {
   display: flex;
-  order: -1;
+  flex-direction: column;
+}
+
+.user-post__block{
+  position: relative;
+  display: flex;
+  flex-direction: row;
   margin-bottom: 2em;
   max-width: 99%;
 }
@@ -74,14 +96,4 @@ body {
   position: relative;
   text-align: justify;
   word-wrap: break-word;
-}
-
-p {
-  font-size: 14px;
-  margin: 0 1em;
-}
-
-.selected {
-  text-decoration: line-through;
-  order: 1;
 }
