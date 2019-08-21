@@ -86,6 +86,7 @@ p {
   order: -2;
   font-size: 14px;
   margin: 0 1em 1em;
+  text-overflow: clip;
 }
 
 .block-date {
@@ -109,6 +110,7 @@ p {
   position: relative;
   text-align: justify;
   word-wrap: break-word;
+  max-width: 99%;
 }
 
 p.preq {

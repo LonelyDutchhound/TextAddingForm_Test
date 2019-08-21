@@ -45,7 +45,7 @@ function UserPost(userText, userDate) {
     $(`.n${this.uniqId}`).prepend(`
       <div class="user-post__checkbox">
         <input type="checkbox" id="n${this.uniqId}">
-      </div><div class="user-post_text">
+      </div><div class="user-post__text">
         <p><em>${this.userDate}</em><br>${this.userText}</p>
       </div>`);
   };
