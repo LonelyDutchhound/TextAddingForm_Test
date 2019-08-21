@@ -1,4 +1,4 @@
-$(function functionName() {
+$(() => {
   $('.text-form__add-button')[0].addEventListener('click', addPost);
   $('.text-form__add-group').keyup(function() {
     if (event.keyCode === 13) addPost();
